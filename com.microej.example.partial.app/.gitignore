@@ -1,0 +1,5 @@
+/.sonar/
+/bin/
+/target~/
+/launchers/*.properties
+/com.microej.example.partial.app.Main/
