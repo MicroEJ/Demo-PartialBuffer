@@ -1,8 +1,3 @@
-..
-    Copyright 2020-2021 MicroEJ Corp. All rights reserved.
-	This library is provided in source code for use, modification and test, subject to license terms.
-	Any modification of the source code will break MicroEJ Corp. warranties on the whole library.
-
 =============================================================================================
 Running the partial buffer demo and integrating partial buffer support to an existing project
 =============================================================================================
@@ -93,7 +88,7 @@ Building the platform
 ~~~~~~~~~~~~~~~~~~~~~
 
 1. In MicroEJ SDK, open the ``stm32f7508_freertos-configuration/STM32F7508.platform`` file
-4. Click on ``Build Platform``
+2. Click on ``Build Platform``
 
 Running the demo application on simulator
 -----------------------------------------
@@ -660,3 +655,8 @@ Back buffer size computation
 A partial buffer always has the same width as the screen but a smaller height.
 
 For example, on the STM32F7508-DK board, the size of a back buffer presenting half the screen would be ``130560`` bytes.
+
+.. ReStructuredText
+.. Copyright 2020-2021 MicroEJ Corp. All rights reserved.
+.. This library is provided in source code for use, modification and test, subject to license terms.
+.. Any modification of the source code will break MicroEJ Corp. warranties on the whole library.

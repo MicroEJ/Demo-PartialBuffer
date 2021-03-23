@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 MicroEJ Corp. All rights reserved.
+ * Copyright 2020-2021 MicroEJ Corp. All rights reserved.
  * Use of this source code is governed by a BSD-style license that can be found with this software.
  */
 package com.microej.example.partial.app.transition;
@@ -35,13 +35,11 @@ public class VerticalTransitionDisplayable extends Displayable implements Animat
 	 *            the old desktop.
 	 * @param newDesktop
 	 *            the new desktop.
-	 * @param animator
-	 *            the animator instance to use.
 	 */
-	public VerticalTransitionDisplayable(Desktop oldDesktop, Desktop newDesktop, Animator animator) {
+	public VerticalTransitionDisplayable(Desktop oldDesktop, Desktop newDesktop) {
 		this.oldDesktop = oldDesktop;
 		this.newDesktop = newDesktop;
-		this.animator = animator;
+		this.animator = new Animator();
 	}
 
 	@Override
@@ -53,6 +51,13 @@ public class VerticalTransitionDisplayable extends Displayable implements Animat
 
 		this.startTime = System.currentTimeMillis();
 		this.animator.startAnimation(this);
+	}
+
+	@Override
+	protected void onHidden() {
+		super.onHidden();
+
+		this.animator.stopAnimation(this);
 	}
 
 	@Override

@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 MicroEJ Corp. All rights reserved.
+ * Copyright 2020-2021 MicroEJ Corp. All rights reserved.
  * Use of this source code is governed by a BSD-style license that can be found with this software.
  */
 package com.microej.example.partial.support;
@@ -60,12 +60,14 @@ public class PartialRenderPolicy extends RenderPolicy {
 		Desktop desktop = getDesktop();
 		Widget widget = desktop.getWidget();
 		if (widget != null) {
-			renderWidget(widget, 0, 0, Display.getDisplay().getWidth(), Display.getDisplay().getHeight());
+			renderWidget(widget, 0, 0, widget.getWidth(), widget.getHeight());
 		}
 	}
 
 	@Override
 	public void requestRender(Widget widget, int x, int y, int width, int height) {
+		width = Math.min(width, widget.getWidth());
+		height = Math.min(height, widget.getHeight());
 		while (widget.isTransparent() || widget.getStyle().getMargin() != NoOutline.NO_OUTLINE) {
 			Container parent = widget.getParent();
 			if (parent == null) {

@@ -1,5 +1,5 @@
 /*
- * Copyright 2013-2020 MicroEJ Corp. All rights reserved.
+ * Copyright 2013-2021 MicroEJ Corp. All rights reserved.
  * Use of this source code is governed by a BSD-style license that can be found with this software.
  */
 package com.microej.example.partial.app.scroll;
@@ -9,7 +9,6 @@ import ej.bon.XMath;
 import ej.microui.MicroUI;
 import ej.mwt.Container;
 import ej.mwt.Widget;
-import ej.mwt.animation.Animator;
 import ej.mwt.util.Size;
 import ej.widget.util.swipe.SwipeEventHandler;
 import ej.widget.util.swipe.SwipeListener;
@@ -20,7 +19,6 @@ import ej.widget.util.swipe.Swipeable;
  */
 public class Scroll extends Container {
 
-	private final Animator animator;
 	@Nullable
 	private Widget child;
 	@Nullable
@@ -41,12 +39,9 @@ public class Scroll extends Container {
 	 *
 	 * @param horizontal
 	 *            <code>true</code> to scroll horizontally, <code>false</code> to scroll vertically.
-	 * @param animator
-	 *            the animator to use.
 	 */
-	public Scroll(boolean horizontal, Animator animator) {
+	public Scroll(boolean horizontal) {
 		this.horizontal = horizontal;
-		this.animator = animator;
 		this.scrollbar = new Scrollbar(0);
 		this.scrollbar.setHorizontal(horizontal);
 		this.showScrollbar = true;
@@ -201,7 +196,7 @@ public class Scroll extends Container {
 			}
 
 			swipeEventHandler = new SwipeEventHandler(excess, false, this.horizontal, this.assistant);
-			swipeEventHandler.setAnimator(this.animator);
+			swipeEventHandler.setAnimator(getDesktop().getAnimator());
 			swipeEventHandler.setSwipeListener(this.assistant);
 			swipeEventHandler.moveTo(this.value);
 			this.swipeEventHandler = swipeEventHandler;

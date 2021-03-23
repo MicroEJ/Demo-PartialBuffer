@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 MicroEJ Corp. All rights reserved.
+ * Copyright 2020-2021 MicroEJ Corp. All rights reserved.
  * Use of this source code is governed by a BSD-style license that can be found with this software.
  */
 package com.microej.example.partial.app;
@@ -15,7 +15,6 @@ import ej.microui.display.Display;
 import ej.microui.display.Displayable;
 import ej.mwt.Desktop;
 import ej.mwt.Widget;
-import ej.mwt.animation.Animator;
 import ej.mwt.render.RenderPolicy;
 import ej.mwt.stylesheet.Stylesheet;
 import ej.widget.basic.Button;
@@ -31,8 +30,6 @@ import ej.widget.container.SimpleDock;
 public class Main {
 
 	private static final int NUM_LIST_ITEMS = 18;
-
-	private static final Animator ANIMATOR = new Animator();
 
 	private final Stylesheet stylesheet;
 
@@ -81,7 +78,7 @@ public class Main {
 			list.addChild(item);
 		}
 
-		Scroll scroll = new Scroll(scrollOrientation, ANIMATOR);
+		Scroll scroll = new Scroll(scrollOrientation);
 		scroll.showScrollbar(false);
 		scroll.setChild(list);
 
@@ -105,7 +102,7 @@ public class Main {
 		changePageList.addChild(horizontalTransitionButton);
 		changePageList.addChild(verticalTransitionButton);
 
-		ProgressBar progressBar = new ProgressBar(ANIMATOR);
+		ProgressBar progressBar = new ProgressBar();
 
 		SimpleDock dock = new SimpleDock(LayoutOrientation.VERTICAL);
 		dock.setFirstChild(progressBar);
@@ -121,9 +118,9 @@ public class Main {
 
 		Displayable displayable;
 		if (horizontalTransition) {
-			displayable = new HorizontalTransitionDisplayable(oldPageDesktop, newPageDesktop, ANIMATOR);
+			displayable = new HorizontalTransitionDisplayable(oldPageDesktop, newPageDesktop);
 		} else {
-			displayable = new VerticalTransitionDisplayable(oldPageDesktop, newPageDesktop, ANIMATOR);
+			displayable = new VerticalTransitionDisplayable(oldPageDesktop, newPageDesktop);
 		}
 		Display.getDisplay().requestShow(displayable);
 

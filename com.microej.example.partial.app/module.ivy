@@ -1,13 +1,13 @@
 <!--
-	Copyright 2020 MicroEJ Corp. All rights reserved.
+	Copyright 2020-2021 MicroEJ Corp. All rights reserved.
 	Use of this source code is governed by a BSD-style license that can be found with this software.
 -->
 <ivy-module version="2.0" xmlns:ea="http://www.easyant.org" xmlns:ej="https://developer.microej.com" ej:version="2.0.0">
-	<info organisation="com.microej.example.partial" module="app" status="integration" revision="1.0.0">
-		<ea:build organisation="com.is2t.easyant.buildtypes" module="build-firmware-singleapp" revision="1.+"/>
+	<info organisation="com.microej.example.partial" module="app" status="integration" revision="1.0.1">
+		<ea:build organisation="com.is2t.easyant.buildtypes" module="build-firmware-singleapp" revision="1.3.+"/>
 		<ea:property name="application.main.class" value="com.microej.example.partial.app.Main"/>
 		<ea:property name="virtual.device.sim.only" value="set"/>
-		<ea:property name="platform-loader.target.platform.dir" value="${easyant.module.dir}/../STM32F7508-SingleApp-CM7hardfp_GCC48-1.0.0/source"/>
+		<ea:property name="platform-loader.target.platform.dir" value="${easyant.module.dir}/../STM32F7508_PartialBuffer-SingleApp-CM7hardfp_GCC48-1.0.1/source"/>
 	</info>
 
 	<configurations defaultconfmapping="default->default;provided->provided;vdruntime->default">
@@ -29,9 +29,9 @@
 		<dependency org="ej.api" name="bon" rev="1.4.0"/>
 		<dependency org="ej.api" name="microui" rev="3.0.3"/>
 
-		<dependency org="ej.library.ui" name="mwt" rev="3.1.2"/>
+		<dependency org="ej.library.ui" name="mwt" rev="3.2.0"/>
 		<dependency org="ej.library.ui" name="widget" rev="3.1.1"/>
 
-		<dependency org="com.microej.example.partial" name="support" rev="1.0.0"/>
+		<dependency org="com.microej.example.partial" name="support" rev="1.0.1"/>
 	</dependencies>
 </ivy-module>

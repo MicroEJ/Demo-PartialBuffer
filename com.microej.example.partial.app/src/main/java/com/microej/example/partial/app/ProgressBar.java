@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 MicroEJ Corp. All rights reserved.
+ * Copyright 2020-2021 MicroEJ Corp. All rights reserved.
  * Use of this source code is governed by a BSD-style license that can be found with this software.
  */
 package com.microej.example.partial.app;
@@ -8,7 +8,6 @@ import ej.microui.display.GraphicsContext;
 import ej.microui.display.Painter;
 import ej.mwt.Widget;
 import ej.mwt.animation.Animation;
-import ej.mwt.animation.Animator;
 import ej.mwt.style.Style;
 import ej.mwt.util.Size;
 
@@ -19,30 +18,18 @@ public class ProgressBar extends Widget implements Animation {
 
 	private static final int ANIM_DURATION = 2_000;
 
-	private final Animator animator;
-
 	private long animStartTime;
 	private int currentAnimStep;
-
-	/**
-	 * Creates a progress bar.
-	 *
-	 * @param animator
-	 *            the animator instance to use.
-	 */
-	public ProgressBar(Animator animator) {
-		this.animator = animator;
-	}
 
 	@Override
 	protected void onShown() {
 		this.animStartTime = System.currentTimeMillis();
-		this.animator.startAnimation(this);
+		getDesktop().getAnimator().startAnimation(this);
 	}
 
 	@Override
 	protected void onHidden() {
-		this.animator.stopAnimation(this);
+		getDesktop().getAnimator().stopAnimation(this);
 	}
 
 	@Override
