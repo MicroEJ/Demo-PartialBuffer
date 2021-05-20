@@ -8,15 +8,24 @@ The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`
 and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`_.
 
 --------------------
+ 1.0.2 - 2021-05-20
+--------------------
+
+Changed
+=======
+
+- Update the `application <com.microej.example.partial.app/CHANGELOG.md>`_ to ``1.0.2``.
+
+--------------------
  1.0.1 - 2021-03-23
 --------------------
 
 Changed
 =======
 
-- Update platform.
-- Update support library.
-- Update application.
+- Update the `platform <stm32f7508_freertos-configuration/CHANGELOG.md>`_ to ``1.0.1``.
+- Update the `support library <com.microej.example.partial.support/CHANGELOG.md>`_ to ``1.0.1``.
+- Update the `application <com.microej.example.partial.app/CHANGELOG.md>`_ to ``1.0.1``.
 
 --------------------
  1.0.0 - 2021-02-09
@@ -25,9 +34,9 @@ Changed
 Added
 =====
 
-- Add STM32F7508-DK platform with partial buffer support.
-- Add partial buffer support library.
-- Add partial buffer application.
+- Add the `STM32F7508-DK platform with partial buffer support <stm32f7508_freertos-configuration/CHANGELOG.md>`_ ``1.0.0``.
+- Add the `partial buffer support library <com.microej.example.partial.support/CHANGELOG.md>`_ ``1.0.0``.
+- Add the `partial buffer application <com.microej.example.partial.app/CHANGELOG.md>`_ ``1.0.0``.
 
 .. ReStructuredText
 .. Copyright 2020-2021 MicroEJ Corp. All rights reserved.
