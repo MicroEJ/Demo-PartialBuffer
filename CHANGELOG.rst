@@ -8,6 +8,15 @@ The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`
 and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`_.
 
 --------------------
+ 1.0.3 - 2023-01-10
+--------------------
+
+Fixed
+=====
+
+- Fix broken links.
+
+--------------------
  1.0.2 - 2021-05-20
 --------------------
 
@@ -39,6 +48,6 @@ Added
 - Add the `partial buffer application <com.microej.example.partial.app/CHANGELOG.md>`_ ``1.0.0``.
 
 .. ReStructuredText
-.. Copyright 2020-2021 MicroEJ Corp. All rights reserved.
+.. Copyright 2020-2023 MicroEJ Corp. All rights reserved.
 .. This library is provided in source code for use, modification and test, subject to license terms.
 .. Any modification of the source code will break MicroEJ Corp. warranties on the whole library.

@@ -59,7 +59,7 @@ Download the following architecture and packs (``.xpf`` and ``.xpfp``):
 - Architecture: https://repository.microej.com/architectures/com/microej/architecture/CM7/CM7hardfp_GCC48/flopi7G26/7.14.0/
 - UI pack: https://repository.microej.com/architectures/com/microej/architecture/CM7/CM7hardfp_GCC48/flopi7G26-ui-pack/13.0.3/
 - FS pack: https://repository.microej.com/modules/com/microej/pack/fs/5.1.2/
-- HAL pack: https://repository.microej.com/modules/com/microej/pack/hal/2.0.1/
+- HAL pack: https://repository.microej.com/modules/com/microej/architecture/generic/hal/hal-pack/2.0.1/
 - NET pack: https://repository.microej.com/modules/com/microej/pack/net/9.2.2/
 
 Importing the architecture and packs
@@ -657,6 +657,6 @@ A partial buffer always has the same width as the screen but a smaller height.
 For example, on the STM32F7508-DK board, the size of a back buffer presenting half the screen would be ``130560`` bytes.
 
 .. ReStructuredText
-.. Copyright 2020-2021 MicroEJ Corp. All rights reserved.
+.. Copyright 2020-2023 MicroEJ Corp. All rights reserved.
 .. This library is provided in source code for use, modification and test, subject to license terms.
 .. Any modification of the source code will break MicroEJ Corp. warranties on the whole library.
